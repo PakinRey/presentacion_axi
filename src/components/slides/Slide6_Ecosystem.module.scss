@@ -1,0 +1,145 @@
+@use 'sass:color';
+@use '../../assets/scss/_variables.scss' as *;
+
+.slideBase {
+  position: relative;
+  width: 100%;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  padding: 1rem;
+}
+
+.mainTitle {
+  font-size: clamp(2rem, 5vw, 2.8rem);
+  font-weight: 800;
+  text-align: center;
+  margin-bottom: 4rem;
+  color: $brand-dark-gray;
+  max-width: 800px;
+}
+
+.flowContainer {
+  display: flex;
+  align-items: stretch; // Hace que las tarjetas tengan la misma altura
+  justify-content: center;
+  gap: 1rem;
+  width: 100%;
+
+  @media (max-width: 1024px) {
+    flex-direction: column;
+    align-items: center;
+    .flowArrow {
+      transform: rotate(90deg);
+      margin: 0.5rem 0;
+    }
+  }
+}
+
+.flowCard {
+  background: $brand-white;
+  border-radius: 12px;
+  border: 1px solid #e5e7eb;
+  box-shadow: 0 4px 6px -1px rgba(0,0,0,0.03);
+  padding: 1.5rem;
+  flex: 1;
+  max-width: 200px;
+  display: flex;
+  flex-direction: column;
+
+  &.highlighted {
+    background-color: $brand-dark-gray;
+    border-color: $brand-green;
+    color: $brand-white;
+    transform: scale(1.05);
+
+    .cardTitle, .cardPurpose {
+      color: $brand-white;
+    }
+    .cardIcon {
+      background-color: $brand-green;
+      color: $brand-dark-gray;
+    }
+  }
+
+  @media (max-width: 1024px) {
+    max-width: 400px;
+    width: 100%;
+  }
+}
+
+.cardHeader {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+}
+
+.cardIcon {
+  flex-shrink: 0;
+  width: 44px;
+  height: 44px;
+  background-color: #f3f4f6;
+  border-radius: 8px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: $brand-dark-gray;
+  font-size: 1.2rem;
+}
+
+.cardTitle {
+  font-size: 1.1rem;
+  font-weight: 700;
+  color: $brand-dark-gray;
+}
+
+.cardPurpose {
+  font-size: 0.85rem;
+  color: #6b7280;
+}
+
+.flowArrow {
+  font-size: 1.5rem;
+  color: #d1d5db;
+  align-self: center;
+}
+
+/* --- ESTILOS PARA MODO PRESENTADOR --- */
+.notesToggle {
+  position: absolute;
+  top: 0;
+  right: 0;
+  background-color: $brand-dark-gray;
+  color: $brand-white;
+  border: none;
+  padding: 0.5rem 1rem;
+  font-size: 0.8rem;
+  font-weight: 600;
+  border-radius: 8px;
+  cursor: pointer;
+  transition: all 0.2s ease;
+  &:hover {
+    background-color: color.adjust($brand-dark-gray, $lightness: 15%);
+  }
+}
+
+.speakerNotes {
+  overflow: hidden;
+  
+  p {
+    background-color: #f3f4f6;
+    border-top: 2px solid #e5e7eb;
+    padding: 1rem;
+    margin-top: 1.5rem; // Espacio que se anima
+    font-size: 0.9rem;
+    text-align: left;
+    line-height: 1.5;
+    color: #4b5563;
+
+    strong {
+      color: $brand-dark-gray;
+    }
+  }
+}

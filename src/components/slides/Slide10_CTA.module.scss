@@ -1,0 +1,146 @@
+@use 'sass:color';
+@use '../../assets/scss/_variables.scss' as *;
+
+.slideBase {
+  position: relative;
+  width: 100%;
+  height: 100%;
+  max-width: 1200px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  padding: 2rem;
+  background-color: $brand-dark-gray;
+  color: $brand-white;
+  border-radius: 20px;
+}
+
+.notesToggle {
+  position: absolute;
+  top: 1.5rem;
+  right: 1.5rem;
+  background-color: rgba($brand-white, 0.1);
+  color: $brand-white;
+  border: 1px solid rgba($brand-white, 0.2);
+  padding: 0.5rem 1rem;
+  font-size: 0.8rem;
+  font-weight: 600;
+  border-radius: 8px;
+  cursor: pointer;
+  transition: all 0.2s ease;
+  &:hover {
+    background-color: rgba($brand-white, 0.2);
+  }
+}
+
+.ctaGrid {
+  display: grid;
+  grid-template-columns: 1.5fr 1fr;
+  gap: 4rem;
+  align-items: center;
+  width: 100%;
+  max-width: 1100px;
+  
+  @media (max-width: 992px) {
+    grid-template-columns: 1fr;
+    text-align: center;
+    gap: 3rem;
+  }
+}
+
+.leftColumn {
+  h2 {
+    font-size: clamp(2.5rem, 5vw, 3.5rem);
+    font-weight: 800;
+    line-height: 1.2;
+    color: $brand-green;
+    margin-bottom: 1.5rem;
+    text-align: left;
+  }
+  .summary {
+    font-size: 1.2rem;
+    color: #d1d5db;
+    line-height: 1.7;
+    max-width: 500px;
+    text-align: left;
+  }
+
+  @media (max-width: 992px) {
+    h2, .summary {
+      text-align: center;
+      margin-left: auto;
+      margin-right: auto;
+    }
+  }
+}
+
+.rightColumn {
+  background-color: rgba($brand-black, 0.2);
+  border: 1px solid rgba($brand-white, 0.1);
+  border-radius: 12px;
+  padding: 2rem;
+}
+
+.stepsTitle {
+  font-size: 1.5rem;
+  font-weight: 700;
+  margin-bottom: 2rem;
+  color: $brand-white;
+  text-align: center;
+}
+
+.stepsList {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  display: flex;
+  flex-direction: column;
+  gap: 1.5rem;
+}
+
+.stepIcon {
+  font-size: 1.5rem;
+  color: $brand-green;
+  flex-shrink: 0;
+  margin-right: 1.5rem;
+  width: 40px;
+  text-align: center;
+}
+
+.stepText {
+  h4 {
+    font-size: 1.1rem;
+    font-weight: 600;
+    margin: 0;
+    color: $brand-white;
+  }
+  .speakerNote {
+    overflow: hidden;
+    font-size: 0.9rem;
+    color: #9ca3af;
+    strong {
+      color: #e5e7eb;
+    }
+  }
+}
+
+li {
+  display: flex;
+  align-items: flex-start;
+}
+
+.footer {
+  margin-top: 4rem;
+  padding-top: 2rem;
+  width: 100%;
+  max-width: 1100px;
+  border-top: 1px solid rgba($brand-white, 0.2);
+  text-align: center;
+  font-size: 1.5rem;
+  color: #9ca3af;
+
+  strong {
+    color: $brand-white;
+  }
+}

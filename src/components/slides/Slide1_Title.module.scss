@@ -1,0 +1,72 @@
+@use '../../assets/scss/variables' as *;
+@use 'sass:color';
+
+.titleSlide {
+  width: 100%;
+  height: 100%;
+  max-width: 1200px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  
+  // Fondo dramático y profesional
+  background-color: $brand-dark-gray;
+  
+  // Aseguramos que el texto sea blanco para que resalte
+  color: $brand-white;
+  padding: 2rem;
+  box-sizing: border-box;
+  border-radius: 50px;
+}
+
+.content {
+  position: relative;
+  z-index: 2;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.logoLuxeContainer {
+  margin-bottom: 2rem;
+  // Estilo para el logo grande en la portada
+  .logoLuxe {
+    width: clamp(200px, 30vw, 400px); // Tamaño responsivo
+    height: auto;
+    filter: brightness(100%); // Asegura que el logo se vea brillante
+    opacity: 1;
+    transition: all 0.5s ease-in-out;
+  }
+}
+
+h1 {
+  font-size: clamp(2.5rem, 6vw, 4.5rem);
+  font-weight: 800;
+  margin-bottom: 0.5rem;
+  line-height: 1.1;
+  color: $brand-white;
+}
+
+h2 {
+  font-size: clamp(1.2rem, 3vw, 2.2rem);
+  font-weight: 400;
+  opacity: 0.8;
+  margin-bottom: 3rem;
+}
+
+.authors {
+  font-size: 1.25rem;
+  font-weight: 500;
+  opacity: 0.9;
+  
+  p {
+    margin: 0;
+  }
+  
+  strong {
+    font-weight: 700;
+    color: $brand-green;
+  }
+}
