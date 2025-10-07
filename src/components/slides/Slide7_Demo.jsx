@@ -10,7 +10,7 @@ export const Slide7_Demo = () => {
   // URL de tu prototipo funcional.
   // Si lo estás corriendo localmente, podría ser 'http://localhost:5174/'
   // Si ya lo subiste a algún lado (Vercel, Netlify), pon esa URL.
-  const prototypeUrl = "http://localhost:5174/";
+  const prototypeUrl = "https://axidigital.com.mx/";
 
   const openModal = () => setIsModalOpen(true);
   const closeModal = () => setIsModalOpen(false);
