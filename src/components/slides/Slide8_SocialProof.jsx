@@ -1,4 +1,4 @@
-// src/components/Slide8_SocialProof/Slide8_SocialProof.js
+// src/components/Slide8_SocialProof/Slide8_SocialProof.jsx
 import React from 'react';
 import { motion } from 'framer-motion';
 import styles from './Slide8_SocialProof.module.scss';

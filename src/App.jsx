@@ -16,9 +16,9 @@ import { Slide7_Demo as Slide9_Demo } from './components/slides/Slide7_Demo.jsx'
 import { Slide8_Roadmap as Slide10_Roadmap } from './components/slides/Slide8_Roadmap.jsx';
 import { Slide9_Investment as Slide11_Investment } from './components/slides/Slide9_Investment.jsx';
 import { Slide10_CTA as Slide12_CTA } from './components/slides/Slide10_CTA.jsx';
+import { Slide8_SocialProof } from './components/slides/Slide8_SocialProof.jsx';
 
 
-import { Slide8_SocialProof } from './components/Slides/Slide8_SocialProof.jsx';
 
 import logoAxi from './logo_axi.svg';
 
